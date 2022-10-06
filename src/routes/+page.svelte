@@ -6,11 +6,7 @@
 		posts = await response.json();
 		return posts;
 	}
-
-    import Form from "$lib/Form.svelte";
-</script>
-
-<Form />
+    </script>
 
 {#await fetchPosts()}
     <span>Loading posts...</span>

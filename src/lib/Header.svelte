@@ -1,22 +1,37 @@
 <script>
+    import Form from "$lib/Form.svelte";
     import ThemeToggle from "$lib/ThemeToggle.svelte";
 
     const menus = [
 		{ name: "home", url: "/" },
 		{ name: "privacy", url: "/privacy" },
 		{ name: "terms of service", url: "/terms" },
-		{ name: "about", url: "/about" }
+		{ name: "about", url: "/about" },
+        { name: "source code", url: "https://github.com/akisblack/memestream-svelte" }
 	];
+
+    import { page } from "$app/stores";
+
+	$: currentPage = $page.url.pathname;
 </script>
 
 <div class="flex flex-col justify-center items-center text-2xl mb-4 text-center">
     <h1 class="font-semibold">memestream</h1>
     <p>the never-ending stream of memes</p>
-    <div class="flex flex-row gap-4 m-4">
-        {#each menus as { url, name }}
-            <a href={url} class="button">{name}</a>
-        {/each}
+    <details class="mt-4" open>
+        <summary>Click here to show/hide navigation</summary>
+        <div class="grid grid-cols-2 gap-4 m-4 sm:(flex flex-row)">
+            {#each menus as { url, name }}
+                <a href={url} class="button">{name}</a>
+            {/each}
+    
+            <ThemeToggle />
+        </div>
 
-        <ThemeToggle />
-    </div>
+        {#if currentPage === "/"}
+            <Form />
+        {/if}
+    </details>
 </div>
+
+
