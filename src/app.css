@@ -1,0 +1,32 @@
+@font-face {
+	font-family: Outfit;
+	src: url(/Outfit.ttf);
+}
+
+html {
+	--primary: #141414;
+	--secondary: #222222;
+	--tertiary: #141414;
+	--grey: #c8c8c8;
+	--accent: #0dcf8e;
+}
+
+html.light {
+	--primary: #dddddd;
+	--secondary: #ffffff;
+	--tertiary: #141414;
+	--grey: #444444;
+	--accent: #0a9e6d;
+}
+
+body {
+	@apply bg-primary font-primary text-grey flex flex-col items-center my-4 transition duration-400;
+}
+
+.button {
+	@apply p-3 bg-accent text-tertiary rounded-full text-lg transition hover:brightness-75 font-semibold;
+}
+
+a:not(.button) {
+	@apply text-accent underline underline-offset-4 transition-opacity hover:opacity-75 font-semibold;
+}
