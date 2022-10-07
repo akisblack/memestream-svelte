@@ -1,5 +1,4 @@
 <script>
-    import Form from "$lib/Form.svelte";
     import ThemeToggle from "$lib/ThemeToggle.svelte";
 
     const menus = [
@@ -9,10 +8,6 @@
 		{ name: "about", url: "/about" },
         { name: "source code", url: "https://github.com/akisblack/memestream-svelte" }
 	];
-
-    import { page } from "$app/stores";
-
-	$: currentPage = $page.url.pathname;
 </script>
 
 <div class="flex flex-col justify-center items-center text-2xl mb-4 text-center">
@@ -27,9 +22,5 @@
     
             <ThemeToggle />
         </div>
-
-        {#if currentPage === "/"}
-            <Form />
-        {/if}
     </details>
 </div>
