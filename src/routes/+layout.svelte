@@ -5,6 +5,13 @@
     import Header from "$lib/Header.svelte";
 </script>
 
+<noscript>
+    <div class="p-4 bg-accent text-tertiary">
+        Please enable JavaScript for this site to work properly.
+    </div>
+</noscript>
 
-<Header />
-<slot />
+<main>
+    <Header />
+    <slot />
+</main>

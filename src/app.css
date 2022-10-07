@@ -9,6 +9,7 @@ html {
 	--tertiary: #141414;
 	--grey: #c8c8c8;
 	--accent: #0dcf8e;
+	color-scheme: dark;
 }
 
 html.light {
@@ -17,14 +18,19 @@ html.light {
 	--tertiary: #141414;
 	--grey: #444444;
 	--accent: #0a9e6d;
+	color-scheme: light;
 }
 
 body {
-	@apply bg-primary font-primary text-grey flex flex-col items-center my-4 transition duration-400;
+	@apply bg-primary font-primary text-grey transition duration-400;
+}
+
+main {
+	@apply flex flex-col items-center my-4;
 }
 
 .button {
-	@apply p-3 bg-accent text-tertiary rounded-full text-lg transition hover:brightness-75 font-semibold;
+	@apply p-3 bg-accent text-tertiary rounded-full text-base transition hover:brightness-75 font-semibold;
 }
 
 a:not(.button) {
