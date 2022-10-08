@@ -12,6 +12,10 @@
 			url: "https://github.com/akisblack/memestream-svelte"
 		}
 	];
+
+	import { page } from "$app/stores";
+
+	$: currentPage = $page.url.pathname;
 </script>
 
 <div
@@ -32,6 +36,8 @@
 			<ThemeToggle />
 		</div>
 
-		<Form />
+		{#if currentPage === "/"}
+            <Form />
+        {/if}
 	</details>
 </div>
