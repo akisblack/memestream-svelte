@@ -45,7 +45,7 @@
 	}
 </script>
 
-<div class="flex flex-basis-a justify-center">
+<div class="flex flex-basis-a justify-center form">
 	<div
 		class="flex flex-col gap-4 p-4 mb-8 mx-4 rounded text-center bg-secondary"
 	>
@@ -86,3 +86,11 @@
 		display: none;
 	}
 </style>
+
+<noscript>
+	<style>
+		.form {
+			display: none;
+		}
+	</style>
+</noscript>

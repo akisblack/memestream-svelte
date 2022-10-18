@@ -41,3 +41,11 @@
         {/if}
 	</details>
 </div>
+
+{#if currentPage != "/"}
+	<style>
+		summary {
+			display: none;
+		}
+	</style>
+{/if}
