@@ -11,7 +11,7 @@
 	</div>
 </noscript>
 
-<main>
+<main class="container">
 	<Header />
 	<slot />
 </main>

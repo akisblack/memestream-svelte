@@ -14,22 +14,22 @@
 	});
 </script>
 
-<div class="flex flex-col-reverse items-center max-w-fit gap-8">
+<div class="flex flex-col-reverse items-center gap-8">
 	{#each data.posts as post}
-		<div class="border-4 border-accent rounded-2 mx-4">
+		<div class="border-4 border-accent rounded-2 mx-4 sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl">
 			{#if post.filetype === "image"}
 				<img
 					src="https://memestream.odyssey346.dev/{post.location}"
 					alt="Post (img or GIF)"
 					loading="lazy"
-					class="rounded-1 w-74 sm:w-xl"
+					class="rounded-1 max-h-screen"
 				/>
 			{:else}
 				<video
 					controls
 					alt="Post (video)"
 					loading="lazy"
-					class="rounded-1 w-74 sm:w-xl"
+					class="rounded-1 max-h-screen"
 				>
 					<source
 						src="https://memestream.odyssey346.dev/{post.location}"
