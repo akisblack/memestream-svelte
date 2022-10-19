@@ -3,11 +3,10 @@
 	let errored: boolean = false;
 	let noFileSelected: boolean = false;
 	let fileTooBig: boolean = false;
+	let input: HTMLInputElement;
 
 	function submitForm() {
 		const formData = new FormData();
-
-		let input = document.getElementById("input") as HTMLInputElement;
 
 		if (!input.validity.valid) {
 			noFileSelected = true;
@@ -51,7 +50,7 @@
 	>
 		<div class="flex flex-col gap-4 sm:flex-row justify-center">
 			<input
-				id="input"
+				bind:this={input}
 				type="file"
 				accept=".jpg, .jpeg, .png, .gif, .mp4"
 				name="file"
