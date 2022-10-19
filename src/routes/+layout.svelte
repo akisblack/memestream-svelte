@@ -6,7 +6,7 @@
 </script>
 
 <noscript>
-	<div class="p-4 bg-accent text-tertiary">
+	<div style="padding: 1rem; background-color: var(--accent); color: var(--tertiary);">
 		Please enable JavaScript for this site to work properly.
 	</div>
 </noscript>
