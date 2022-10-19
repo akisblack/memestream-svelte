@@ -84,6 +84,10 @@
 	::file-selector-button {
 		display: none;
 	}
+
+	input {
+		text-align-last: center;
+	}
 </style>
 
 <noscript>
