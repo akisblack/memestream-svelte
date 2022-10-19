@@ -6,11 +6,9 @@
 
 	onMount(() => {
 		const interval = setInterval(async () => {
-			const response = await fetch(`https://memestream.odyssey346.dev/api/v1/posts`);
-			if (response.ok) {
-				data.posts = response.json();
-			}
-		}, 30_000);
+			const response = await fetch("https://memestream.odyssey346.dev/api/v1/posts").then((res) => res.json())
+			data.posts = response
+		}, 30000);
 
 		return () => clearInterval(interval);
 	});
