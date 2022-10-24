@@ -25,7 +25,7 @@
 	<p>the never-ending stream of memes</p>
 	<details class="mt-4" open>
 		<summary
-			class="list-none cursor-pointer text-violet-600 dark:text-violet"
+			class="list-none cursor-pointer text-violet-600 dark:text-violet {currentPage !== "/" ? "hidden" : ""}"
 			>show/hide navigation</summary
 		>
 		<div class="grid grid-cols-2 gap-4 m-4 sm:(flex flex-row)">
@@ -41,11 +41,3 @@
         {/if}
 	</details>
 </div>
-
-{#if currentPage != "/"}
-	<style>
-		summary {
-			display: none;
-		}
-	</style>
-{/if}
