@@ -6,7 +6,7 @@
 
 	onMount(() => {
 		const interval = setInterval(async () => {
-			const response = await fetch("https://memestream.odyssey346.dev/api/v1/posts").then((res) => res.json())
+			const response = await fetch("https://ms.odyssey346.dev/api/v1/posts").then((res) => res.json())
 			data.posts = response
 		}, 30000);
 
@@ -19,7 +19,7 @@
 		<div class="border-4 border-accent rounded-2 mx-4 sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl">
 			{#if post.filetype === "image"}
 				<img
-					src="https://memestream.odyssey346.dev/{post.location}"
+					src="https://ms.odyssey346.dev/api{post.location}"
 					alt="Post (img or GIF)"
 					loading="lazy"
 					class="rounded-1 max-h-screen"
@@ -32,7 +32,7 @@
 					class="rounded-1 max-h-screen"
 				>
 					<source
-						src="https://memestream.odyssey346.dev/{post.location}"
+						src="https://ms.odyssey346.dev/api{post.location}"
 						type="video/mp4"
 					/>
 					<track kind="captions" />

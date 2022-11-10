@@ -28,7 +28,7 @@
 
 		formData.append("file", file);
 
-		fetch("https://memestream.odyssey346.dev/api/v1/upload", {
+		fetch("https://ms.odyssey346.dev/api/v1/upload", {
 			method: "POST",
 			body: formData
 		})
